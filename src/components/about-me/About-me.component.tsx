@@ -5,7 +5,7 @@ export const AboutMeComponent = () => {
     return (
         <>
             <div className={styles['about-me-block']}>
-                <img className={styles['about-me-avatar']} src="me.jpg" />
+                <img alt="about me" className={styles['about-me-avatar']} src="me.jpg" />
                 <div>
                     <h2>About me</h2>
                     <p className={aboutMeDescriptionStyle}>
