@@ -19,7 +19,7 @@ export const AboutMeComponent = () => {
                         This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my
                         own small project for the portfolio.
                     </p>
-                    <p className={aboutMeDescriptionStyle}>You can contact me via [social network name] and check out my GitHub.</p>
+                    <p className={aboutMeDescriptionStyle}>You can contact me via GITHUB and check out my GitHub.</p>
                 </div>
             </div>
         </>
