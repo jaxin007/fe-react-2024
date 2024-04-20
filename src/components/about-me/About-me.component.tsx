@@ -13,14 +13,22 @@ export const AboutMeComponent = () => {
                         like React, HTML, CSS, JavaScript and Git version control system.
                     </p>
                     <p className={aboutMeDescriptionStyle}>
-                        This page was developed during the course &apos;Intro to React&apos; from Masters Academy in 2024.
+                        This page was developed during the course &apos;
+                        <a href="https://www.mastersacademy.education/frontend-react-it">
+                            <u>Intro to React</u>
+                        </a>
+                        &apos; from Masters Academy in 2024.
                     </p>
                     <p className={aboutMeDescriptionStyle}>
                         This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my
                         own small project for the portfolio.
                     </p>
                     <p className={aboutMeDescriptionStyle}>
-                        You can contact me via <a href="https://github.com/jaxin007">My Personal GitHub</a> and check out my GitHub.
+                        You can contact me via{' '}
+                        <a href="https://github.com/jaxin007">
+                            <u>My Personal GitHub</u>
+                        </a>{' '}
+                        and check out my GitHub.
                     </p>
                 </div>
             </div>
