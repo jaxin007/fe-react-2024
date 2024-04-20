@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,6 +11,14 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --main-red: #EF4934;
+  --hover-red: #D43824;
+  --darkest-gray: #111;
+  --gray: #333;
+  --gray-2: #585858;
+  --gray-3: #CCC;
+  --gray-4: #E1E1E1;
+  --grey-hover: #F1F1F1
 }
 
 a {
