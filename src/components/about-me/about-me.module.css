@@ -25,7 +25,10 @@
   margin-bottom: 30px;
 }
 
-@media only screen and (min-width: 768px) {
+/*
+  The following media queries are for the desktop version of the site (720/900/1024+).
+*/
+@media only screen and (min-width: 720px) {
 
   .about-me-block {
     flex-direction: row-reverse;
@@ -45,7 +48,23 @@
   }
 
   .about-me-avatar {
-    margin-top: 100px;
+    margin-top: 80px;
+    height: 294px;
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .about-me-avatar {
+    height: 389px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .about-me-avatar {
     height: 489px;
     width: 500px;
   }
