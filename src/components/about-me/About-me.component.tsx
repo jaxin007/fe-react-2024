@@ -1,13 +1,13 @@
 import styles from './about-me.module.css';
 export const AboutMeComponent = () => {
-    const aboutMeDescriptionStyle = styles['about-me-description'];
+    const aboutMeDescriptionStyle = styles.aboutMeDescription;
 
     return (
         <>
-            <div className={styles['about-me-block']}>
-                <img alt="about me" className={styles['about-me-avatar']} src="me.jpg" />
+            <div className={styles.aboutMeBlock}>
+                <img alt="about me" className={styles.aboutMeAvatar} src="me.jpg" />
                 <div>
-                    <h2 className={styles['about-me-header']}>About me</h2>
+                    <h2 className={styles.aboutMeHeader}>About me</h2>
                     <p className={aboutMeDescriptionStyle}>
                         Hi! My name is Dmytro and I&apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies
                         like React, HTML, CSS, JavaScript and Git version control system.
