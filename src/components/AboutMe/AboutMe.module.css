@@ -1,9 +1,9 @@
 .aboutMeBlock {
-  margin-top: 30px;
   max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin: 30px;
 }
 
 .aboutMeAvatar {

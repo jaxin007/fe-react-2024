@@ -1,5 +1,5 @@
-import styles from './about-me.module.css';
-export const AboutMeComponent = () => {
+import styles from './AboutMe.module.css';
+export const AboutMe = () => {
     const aboutMeDescriptionStyle = styles.aboutMeDescription;
 
     return (

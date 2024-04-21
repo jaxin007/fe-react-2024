@@ -1,4 +1,4 @@
-import { AboutMeComponent } from '@/components/about-me/About-me.component.tsx';
+import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
 
 import { HeaderComponent } from './components/header/Header.component.tsx';
 
@@ -9,7 +9,7 @@ function App() {
         <>
             <HeaderComponent />
             <main className="home">
-                <AboutMeComponent></AboutMeComponent>
+                <AboutMe></AboutMe>
             </main>
         </>
     );
