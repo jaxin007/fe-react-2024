@@ -1,0 +1,71 @@
+.aboutMeBlock {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px;
+}
+
+.aboutMeAvatar {
+  border-radius: 40px;
+  height: 294px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.aboutMeHeader {
+  margin-bottom: 30px;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.aboutMeDescription {
+  font-size: 16px;
+  line-height: 19.5px;
+  margin-bottom: 30px;
+}
+
+/*
+  The following media queries are for the desktop version of the site (720/900/1024+).
+*/
+@media only screen and (min-width: 720px) {
+
+  .aboutMeBlock {
+    flex-direction: row-reverse;
+    max-width: 1175px;
+    gap: 100px;
+  }
+
+  .aboutMeHeader {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  .aboutMeDescription {
+    line-height: 32px;
+    margin-bottom: 32px;
+    font-size: 22px;
+  }
+
+  .aboutMeAvatar {
+    margin-top: 80px;
+    height: 294px;
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .aboutMeAvatar {
+    height: 389px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .aboutMeAvatar {
+    height: 489px;
+    width: 500px;
+  }
+}
