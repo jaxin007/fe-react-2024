@@ -1,0 +1,18 @@
+.header {
+  background: var(--darkest-gray);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftIcons {
+  display: flex;
+  margin-left: 30px;
+}
+
+.rightIcons {
+  display: flex;
+  margin-right: 30px;
+  gap: 14px;
+}

@@ -1,0 +1,27 @@
+.footerBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.iconsBlock {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.orangeLink {
+  color: var(--main-red);
+}
+
+.orangeLink:hover {
+  color: var(--hover-red);
+}
