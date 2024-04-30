@@ -24,11 +24,9 @@
   font-weight: 700;
 }
 
-.line {
-  margin-top: -20px;
-  border-top: solid 1.5px var(--gray-2);
-  width: var(--mobile-width);
-  margin-bottom: 30px
+.aboutMeDescription {
+  margin-bottom: 32px;
+  line-height: 19.5px;
 }
 
 /*
@@ -40,6 +38,7 @@
     flex-direction: row-reverse;
     max-width: 1175px;
     gap: 100px;
+    margin: 60px;
   }
 
   .aboutMeHeader {

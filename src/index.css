@@ -20,6 +20,10 @@
   --mobile-width: 350px;
 }
 
+a {
+  cursor: pointer;
+}
+
 a:hover {
   color: #535BF2;
 }
@@ -43,8 +47,6 @@ button {
 
 p {
   font-size: 16px;
-  line-height: 19.5px;
-  margin-bottom: 30px;
 }
 
 button:hover {

@@ -34,7 +34,6 @@ export const AboutMe = () => {
                             and check out my GitHub.
                         </p>
                     </div>
-                    <div className={styles.line}></div>
                 </div>
             </div>
         </>

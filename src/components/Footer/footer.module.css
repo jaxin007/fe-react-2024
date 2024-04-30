@@ -9,7 +9,8 @@
   flex-direction: column;
   max-width: 350px;
   gap: 30px;
-  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .iconsBlock {
@@ -24,4 +25,21 @@
 
 .orangeLink:hover {
   color: var(--hover-red);
+}
+
+.line {
+  border-top: solid 1.5px var(--gray-2);
+  width: var(--mobile-width);
+}
+
+@media only screen and (min-width: 720px) {
+
+  .footerInfo {
+    margin-top: 55px;
+    max-width: 1175px;
+  }
+
+  .line {
+    width: 1150px;
+  }
 }

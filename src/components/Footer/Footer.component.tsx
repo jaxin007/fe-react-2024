@@ -6,9 +6,9 @@ import styles from './footer.module.css';
 
 export const Footer = () => (
     <>
-        <div className={styles.footerBlock}>
-            <div className={styles.line}></div>
+        <footer className={styles.footerBlock}>
             <div className={styles.footerInfo}>
+                <div className={styles.line}></div>
                 <div className={styles.iconsBlock}>
                     <IconWithRedirect icon={images.social.facebook} url={links.facebook}></IconWithRedirect>
                     <IconWithRedirect icon={images.social.linkedin} url={links.linkedin}></IconWithRedirect>
@@ -16,12 +16,12 @@ export const Footer = () => (
                 </div>
                 <p>
                     Made with 💗 on course{' '}
-                    <a href="" className={styles.orangeLink}>
+                    <a href={links.google} className={styles.orangeLink}>
                         <u>&apos;Intro to React&apos; from Masters Academy in 2024</u>
                     </a>{' '}
                     , by Dmytro
                 </p>
             </div>
-        </div>
+        </footer>
     </>
 );
