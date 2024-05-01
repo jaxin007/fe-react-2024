@@ -1,7 +1,12 @@
 .aboutMeBlock {
-  max-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutMeInfo {
   display: flex;
   flex-direction: column;
+  max-width: 350px;
   gap: 30px;
   margin: 30px;
 }
@@ -20,9 +25,8 @@
 }
 
 .aboutMeDescription {
-  font-size: 16px;
+  margin-bottom: 32px;
   line-height: 19.5px;
-  margin-bottom: 30px;
 }
 
 /*
@@ -30,10 +34,11 @@
 */
 @media only screen and (min-width: 720px) {
 
-  .aboutMeBlock {
+  .aboutMeInfo {
     flex-direction: row-reverse;
     max-width: 1175px;
     gap: 100px;
+    margin: 60px;
   }
 
   .aboutMeHeader {
