@@ -2,7 +2,7 @@ import IconWithRedirect from '@/components/IconWithRedirect/IconWithRedirect.com
 import { images } from '@/constants/images.constant.ts';
 import { links } from '@/constants/links.constant.ts';
 
-import styles from './footer.module.css';
+import styles from './Footer.module.css';
 
 export const Footer = () => (
     <>

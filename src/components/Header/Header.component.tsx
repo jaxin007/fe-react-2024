@@ -3,7 +3,7 @@ import TextWithRedirect from '@/components/TextWithRedirect/TextWithRedirect.com
 import { images } from '@/constants/images.constant.ts';
 import { links } from '@/constants/links.constant.ts';
 
-import styles from './header.module.css';
+import styles from './Header.module.css';
 
 export const Header = () => (
     <div>

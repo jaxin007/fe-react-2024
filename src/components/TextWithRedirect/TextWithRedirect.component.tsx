@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 interface IconWithRedirectProps {
     text: string;
@@ -7,7 +7,7 @@ interface IconWithRedirectProps {
     alt?: string;
 }
 
-const TextWithRedirect: React.FC<IconWithRedirectProps> = ({ className = 'a', text, url, alt = 'text' }) => (
+const TextWithRedirect: FC<IconWithRedirectProps> = ({ className = 'a', text, url, alt = 'text' }) => (
     <a className={className} href={url}>
         <p>{text}</p>
     </a>
