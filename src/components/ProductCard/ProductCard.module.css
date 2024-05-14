@@ -1,0 +1,50 @@
+.cardImage {
+  width: 200px;
+  height: 205px;
+  border-radius: 20px;
+  margin: auto
+}
+
+.cardWrapper {
+  border: 1px solid #333;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 15px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.priceWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardPrice {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.hryvna {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  margin: 0;
+  padding: 5px 0 0 2px;
+}
+
+.cardPriceBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+

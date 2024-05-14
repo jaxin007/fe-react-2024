@@ -39,6 +39,15 @@
   display: none;
 }
 
+.activeButton {
+  background: none;
+  font-weight: 700 !important;
+}
+
+.inactiveButton {
+  background: none;
+}
+
 @media screen and (min-width: 720px) {
 
   .header {
@@ -59,7 +68,6 @@
     display: flex;
     margin-right: 115px;
     gap: 50px;
-    font-weight: 500;
   }
 
   .rightIcons {
