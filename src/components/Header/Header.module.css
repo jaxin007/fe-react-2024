@@ -82,6 +82,7 @@
     align-items: center;
     gap: 6px;
     border-radius: 40px;
+    height: 35px;
   }
 
   .signUpButton {
@@ -91,6 +92,8 @@
     align-items: center;
     gap: 6px;
     border-radius: 40px;
+    height: 35px;
+    width: 135px;
   }
 
   .menuDuoIcon {
