@@ -8,5 +8,13 @@
 .grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(1, minmax(275px, 1fr));
+  justify-items: center;
+}
+
+@media screen and (min-width: 720px) {
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
 }

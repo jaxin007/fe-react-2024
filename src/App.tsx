@@ -11,11 +11,11 @@ import './App.module.css';
 
 function App() {
     const [activePage, setActivePage] = useState<Pages>('about');
-    const [totalCart, setTotalCart] = useState(0);
+    const [totalProductsInCart, setTotalProductsInCart] = useState(0);
 
     useEffect(() => {
         const productsCartAmount = getProductsCartAmount();
-        setTotalCart(productsCartAmount);
+        setTotalProductsInCart(productsCartAmount);
     }, []);
 
     const handleActivePage = (page: Pages) => {
@@ -23,16 +23,16 @@ function App() {
     };
 
     const updateTotalCart = () => {
-        const total = getProductsCartAmount();
+        const totalProducts = getProductsCartAmount();
 
-        setTotalCart(total);
+        setTotalProductsInCart(totalProducts);
     };
 
     return (
         <>
-            <Header activePage={activePage} handleActivePage={handleActivePage} totalCart={totalCart} />
-            {activePage === 'about' ? <AboutMe></AboutMe> : <ProductList updateTotalCart={updateTotalCart}></ProductList>}
-            <Footer></Footer>
+            <Header activePage={activePage} handleActivePage={handleActivePage} totalProductsInCart={totalProductsInCart} />
+            {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} />}
+            <Footer />
         </>
     );
 }

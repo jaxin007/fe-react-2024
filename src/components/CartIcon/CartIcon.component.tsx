@@ -11,9 +11,9 @@ interface CartIconProps {
 
 export const CartIcon: FC<CartIconProps> = ({ counter, handleCartIcon }) => (
     <div>
-        <a className={styles.cartButton} onClick={handleCartIcon ?? (() => null)} href="/#">
+        <button className={styles.cartButton} onClick={handleCartIcon ?? (() => null)}>
             <img src={images.cartIcon} alt={'cart icon'} />
             {counter ? <div className={styles.counter}>{counter}</div> : ''}
-        </a>
+        </button>
     </div>
 );

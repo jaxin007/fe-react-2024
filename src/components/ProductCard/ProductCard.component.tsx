@@ -37,7 +37,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onCartChange,
                     <div className={styles.cardPrice}>{product.price}</div>
                     <p className={styles.hryvna}>₴</p>
                 </div>
-                <CartIcon counter={isInCart ? 1 : 0} handleCartIcon={handleCartClick}></CartIcon>
+                <CartIcon counter={isInCart ? 1 : 0} handleCartIcon={handleCartClick} />
             </div>
         </div>
     );

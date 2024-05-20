@@ -5,6 +5,14 @@
   justify-content: center;
 }
 
+.cartButton:hover {
+  border-color: transparent;
+}
+
+.cartButton:focus {
+  outline: transparent;
+}
+
 .counter {
   display: flex;
   align-items: center;

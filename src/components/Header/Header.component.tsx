@@ -10,11 +10,11 @@ import styles from './Header.module.css';
 
 interface HeaderProps {
     activePage: Pages;
-    totalCart: number;
+    totalProductsInCart: number;
     handleActivePage: (page: Pages) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ totalCart, handleActivePage, activePage }) => (
+export const Header: React.FC<HeaderProps> = ({ totalProductsInCart, handleActivePage, activePage }) => (
     <div>
         <div className={styles.header}>
             <div className={styles.leftIcons}>
@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ totalCart, handleActivePage, act
                     </button>
                 </div>
 
-                <CartIcon counter={totalCart}></CartIcon>
+                <CartIcon counter={totalProductsInCart} handleCartIcon={() => handleActivePage('products')}></CartIcon>
                 <IconWithRedirect className={styles.menuDuoIcon} icon={images.menuDuoIcon} url="/#"></IconWithRedirect>
                 <button className={styles.signInButton}>
                     <img src={images.signInIcon} alt="sign in button" />

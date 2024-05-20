@@ -1,24 +1,34 @@
-.cardImage {
-  width: 200px;
-  height: 205px;
-  border-radius: 20px;
-  margin: auto
-}
-
 .cardWrapper {
   border: 1px solid #333;
   border-radius: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px 15px;
+  gap: 20px;
+  padding: 20px 40px;
+  width: 275px;
+  height: 400px;
+}
+
+.cardImage {
+  width: 200px;
+  height: 205px;
+  border-radius: 20px;
 }
 
 .cardTitle {
   font-size: 22px;
   font-weight: 600;
   line-height: 25px;
+}
+
+.cardPriceBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .priceWrap {
@@ -41,10 +51,9 @@
   padding: 5px 0 0 2px;
 }
 
-.cardPriceBlock {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
+@media screen and (min-width: 720px) {
 
+  .cardWrapper {
+    padding: 25px 20px;
+  }
+}
