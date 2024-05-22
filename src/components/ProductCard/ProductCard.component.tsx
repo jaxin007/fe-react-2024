@@ -30,7 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onCartChange,
 
     useEffect(() => {
         onCartChange();
-    }, [isInCart]);
+    }, [onCartChange, productCount]);
 
     return (
         <div className={styles.cardWrapper}>
