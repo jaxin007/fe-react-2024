@@ -1,11 +1,20 @@
+import React from 'react';
+
+import { CartIcon } from '@/components/CartIcon/CartIcon.component.tsx';
 import IconWithRedirect from '@/components/IconWithRedirect/IconWithRedirect.component.tsx';
-import TextWithRedirect from '@/components/TextWithRedirect/TextWithRedirect.component.tsx';
 import { images } from '@/constants/images.constant.ts';
 import { links } from '@/constants/links.constant.ts';
+import type { Pages } from '@/types/pages.type.ts';
 
 import styles from './Header.module.css';
 
-export const Header = () => (
+interface HeaderProps {
+    activePage: Pages;
+    totalProductsInCart: number;
+    handleActivePage: (page: Pages) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ totalProductsInCart, handleActivePage, activePage }) => (
     <div>
         <div className={styles.header}>
             <div className={styles.leftIcons}>
@@ -18,10 +27,21 @@ export const Header = () => (
             </div>
             <div className={styles.rightIcons}>
                 <div className={styles.pageTabs}>
-                    <TextWithRedirect url={'/#'} text={'About'}></TextWithRedirect>
-                    <TextWithRedirect url={'/#'} text={'Products'}></TextWithRedirect>
+                    <button
+                        className={activePage === 'about' ? styles.activeButton : styles.inactiveButton}
+                        onClick={() => handleActivePage('about')}
+                    >
+                        About
+                    </button>
+                    <button
+                        className={activePage === 'products' ? styles.activeButton : styles.inactiveButton}
+                        onClick={() => handleActivePage('products')}
+                    >
+                        Products
+                    </button>
                 </div>
-                <IconWithRedirect className={styles.cartIcon} icon={images.cartIcon} url="/#"></IconWithRedirect>
+
+                <CartIcon counter={totalProductsInCart} handleCartIcon={() => handleActivePage('products')}></CartIcon>
                 <IconWithRedirect className={styles.menuDuoIcon} icon={images.menuDuoIcon} url="/#"></IconWithRedirect>
                 <button className={styles.signInButton}>
                     <img src={images.signInIcon} alt="sign in button" />

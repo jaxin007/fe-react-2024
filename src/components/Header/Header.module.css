@@ -39,6 +39,15 @@
   display: none;
 }
 
+.activeButton {
+  background: none;
+  font-weight: 700 !important;
+}
+
+.inactiveButton {
+  background: none;
+}
+
 @media screen and (min-width: 720px) {
 
   .header {
@@ -59,7 +68,6 @@
     display: flex;
     margin-right: 115px;
     gap: 50px;
-    font-weight: 500;
   }
 
   .rightIcons {
@@ -74,6 +82,7 @@
     align-items: center;
     gap: 6px;
     border-radius: 40px;
+    height: 35px;
   }
 
   .signUpButton {
@@ -83,6 +92,8 @@
     align-items: center;
     gap: 6px;
     border-radius: 40px;
+    height: 35px;
+    width: 135px;
   }
 
   .menuDuoIcon {
