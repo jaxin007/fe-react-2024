@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ProductCard } from '@/components/ProductCard/ProductCard.component.tsx';
 import { products } from '@/constants/products.constant.ts';
 import type { Product } from '@/models/product.model.ts';
+import type { Cart } from '@/types/cart.type.ts';
 
 import styles from './ProductsList.module.css';
 
@@ -11,8 +12,8 @@ interface ProductProps {
 }
 
 export const ProductList: React.FC<ProductProps> = ({ updateTotalCart }) => {
-    const initialProductIds = localStorage.getItem('cartIds') || '[]';
-    const [productIds, setProductIds] = useState<string[]>(initialProductIds ? JSON.parse(initialProductIds) : []);
+    const initialProductIds = localStorage.getItem('cart') || '{}';
+    const [productsCart, setProductsCart] = useState<Cart>(initialProductIds ? JSON.parse(initialProductIds) : {});
 
     return (
         <div className={styles.mainGridWrapper}>
@@ -22,8 +23,8 @@ export const ProductList: React.FC<ProductProps> = ({ updateTotalCart }) => {
                         key={item.id}
                         product={item}
                         onCartChange={updateTotalCart}
-                        cartIds={productIds}
-                        setProductIds={setProductIds}
+                        productsCart={productsCart}
+                        setProductsCart={setProductsCart}
                     />
                 ))}
             </div>
