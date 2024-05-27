@@ -4,6 +4,7 @@ import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
 import { Footer } from '@/components/Footer/Footer.component.tsx';
 import { Header } from '@/components/Header/Header.component.tsx';
 import { ProductList } from '@/components/ProductsList/ProductsList.component.tsx';
+import SearchBar from '@/components/SearchBar/SearchBar.component.tsx';
 import { getCurrentTheme } from '@/helpers/get-current-theme.ts';
 import { getProductsCartAmount } from '@/helpers/get-products-cart-amount.ts';
 import type { Pages } from '@/types/pages.type.ts';
@@ -62,6 +63,7 @@ function App() {
                     setTheme={handleTheme}
                 />
                 <div>
+                    {activePage === 'products' && <SearchBar theme={currentTheme} />}
                     {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
                     <Footer />
                 </div>

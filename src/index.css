@@ -29,7 +29,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1A1A1A;
+  background: none;
   cursor: pointer;
   transition: border-color .25s;
 }

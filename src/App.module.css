@@ -15,28 +15,34 @@
 .dark {
   --background-header: var(--darkest-gray);
   --background-main: var(--darkest-gray);
-  --text-color-header: var(--white);
   --text-color: var(--white);
+  --text-color-header: var(--white);
+  --text-color-placeholder: var(--gray-2);
   --icon-color: var(--main-red);
   --icon-text-color: var(--white);
   --item-border-color: var(--gray);
   --button-background-main: var(--gray);
   --button-background-secondary: var(--main-red);
   --button-border-secondary: var(--main-red);
-  --button-text-secondary: var(--white)
+  --button-text-secondary: var(--white);
+  --button-background-third: var(--gray);
+  --button-border-third: var(--gray-2);
 }
 
 .light {
   --background-header: var(--darkest-gray);
   --background-main: var(--white);
-  --text-color-header: var(--white);
   --text-color: var(--darkest-gray);
+  --text-color-header: var(--white);
+  --text-color-placeholder: var(--gray-2);
   --icon-color: var(--main-red);
   --icon-text-color: var(--darkest-gray);
   --item-border-color: var(--gray);
   --button-background-main: var(--gray);
   --button-background-secondary: var(--darkest-gray);
   --button-border-secondary: var(--gray-2);
-  --button-text-secondary: var(--gray-2)
+  --button-text-secondary: var(--gray-2);
+  --button-background-third: var(--white);
+  --button-border-third: var(--gray-4);
 }
 
