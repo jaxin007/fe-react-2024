@@ -4,6 +4,7 @@ import { CartIcon } from '@/components/CartIcon/CartIcon.component.tsx';
 import IconWithRedirect from '@/components/IconWithRedirect/IconWithRedirect.component.tsx';
 import { images } from '@/constants/images.constant.ts';
 import { links } from '@/constants/links.constant.ts';
+import DarkTheme from '@/icons/dark-theme.svg?react';
 import type { Pages } from '@/types/pages.type.ts';
 
 import styles from './Header.module.css';
@@ -20,9 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ totalProductsInCart, handleActiv
             <div className={styles.leftIcons}>
                 <IconWithRedirect icon={images.maCrownIcon} url={links.google} alt={'masters academy icon'}></IconWithRedirect>
                 <div className={styles.themes}>
-                    <img src={images.whiteThemeIcon} alt={'white theme icon'} />
-                    <img src={images.verticalDivider} alt={'vertical divider'} />
-                    <img src={images.darkThemeIcon} alt={'dark theme icon'} />
+                    <DarkTheme height={'20'} width={'20'} />
                 </div>
             </div>
             <div className={styles.rightIcons}>
