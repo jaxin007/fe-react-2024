@@ -1,6 +1,8 @@
 .aboutMeBlock {
   display: flex;
   justify-content: center;
+  background: var(--background-main);
+  color: var(--text-color);
 }
 
 .aboutMeInfo {

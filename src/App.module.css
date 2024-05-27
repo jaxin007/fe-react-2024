@@ -1,3 +1,42 @@
-.custom-class {
-  margin-top: 10px;
+@import "normalize.css";
+
+:root {
+  --main-red: #EF4934;
+  --hover-red: #D43824;
+  --darkest-gray: #111;
+  --white: #FEFEFE;
+  --gray: #333;
+  --gray-2: #585858;
+  --gray-3: #CCC;
+  --gray-4: #E1E1E1;
+  --grey-hover: #F1F1F1;
 }
+
+.dark {
+  --background-header: var(--darkest-gray);
+  --background-main: var(--darkest-gray);
+  --text-color-header: var(--white);
+  --text-color: var(--white);
+  --icon-color: var(--main-red);
+  --icon-text-color: var(--white);
+  --item-border-color: var(--gray);
+  --button-background-main: var(--gray);
+  --button-background-secondary: var(--main-red);
+  --button-border-secondary: var(--main-red);
+  --button-text-secondary: var(--white)
+}
+
+.light {
+  --background-header: var(--darkest-gray);
+  --background-main: var(--white);
+  --text-color-header: var(--white);
+  --text-color: var(--darkest-gray);
+  --icon-color: var(--main-red);
+  --icon-text-color: var(--darkest-gray);
+  --item-border-color: var(--gray);
+  --button-background-main: var(--gray);
+  --button-background-secondary: var(--darkest-gray);
+  --button-border-secondary: var(--gray-2);
+  --button-text-secondary: var(--gray-2)
+}
+
