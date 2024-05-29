@@ -12,7 +12,7 @@
   --grey-hover: #F1F1F1;
 }
 
-.dark {
+html[theme="dark"] {
   --background-header: var(--darkest-gray);
   --background-main: var(--darkest-gray);
   --text-color: var(--white);
@@ -29,7 +29,7 @@
   --button-border-third: var(--gray-2);
 }
 
-.light {
+html[theme="light"] {
   --background-header: var(--darkest-gray);
   --background-main: var(--white);
   --text-color: var(--darkest-gray);
@@ -45,4 +45,3 @@
   --button-background-third: var(--white);
   --button-border-third: var(--gray-4);
 }
-

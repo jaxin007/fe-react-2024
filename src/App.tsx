@@ -11,8 +11,6 @@ import { getProductsCartAmount } from '@/helpers/get-products-cart-amount.ts';
 import type { Pages } from '@/types/pages.type.ts';
 import type { Themes } from '@/types/themes.type.ts';
 
-import styles from './App.module.css';
-
 function App() {
     const [activePage, setActivePage] = useState<Pages>('about');
     const [totalProductsInCart, setTotalProductsInCart] = useState(0);
@@ -52,19 +50,17 @@ function App() {
         <>
             <HelmetProvider>
                 <Helmet htmlAttributes={{ theme: currentTheme }}></Helmet>
-                <div className={`${currentTheme === 'dark' ? styles.dark : styles.light}`}>
-                    <Header
-                        activePage={activePage}
-                        handleActivePage={handleActivePage}
-                        totalProductsInCart={totalProductsInCart}
-                        theme={currentTheme}
-                        setTheme={handleTheme}
-                    />
-                    <div>
-                        {activePage === 'products' && <SearchBar theme={currentTheme} />}
-                        {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
-                        <Footer />
-                    </div>
+                <Header
+                    activePage={activePage}
+                    handleActivePage={handleActivePage}
+                    totalProductsInCart={totalProductsInCart}
+                    theme={currentTheme}
+                    setTheme={handleTheme}
+                />
+                <div>
+                    {activePage === 'products' && <SearchBar theme={currentTheme} />}
+                    {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
+                    <Footer />
                 </div>
             </HelmetProvider>
         </>
