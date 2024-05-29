@@ -1,16 +1,15 @@
-const imagesFolder = './images';
+const iconsFolder = './src/assets/icons';
+const imagesFolder = './src/assets/images';
 
 export const images = {
     meImage: `${imagesFolder}/me.jpg`,
-    maCrownIcon: `${imagesFolder}/ma-crown.svg`,
-    viteIcon: `${imagesFolder}/vite.svg`,
-    menuDuoIcon: `${imagesFolder}/menu-duo.svg`,
-    signInIcon: `${imagesFolder}/sign-in.svg`,
-    searchIcon: `${imagesFolder}/search-icon.svg`,
-    arrowDown: `${imagesFolder}/arrow-down.svg`,
+    maCrownIcon: `${iconsFolder}/ma-crown.svg`,
+    menuDuoIcon: `${iconsFolder}/menu-duo.svg`,
+    signInIcon: `${iconsFolder}/sign-in.svg`,
+    searchIcon: `${iconsFolder}/search-icon.svg`,
     social: {
-        linkedin: `${imagesFolder}/linkedin-dark.svg`,
-        instagram: `${imagesFolder}/instagram-dark.svg`,
-        facebook: `${imagesFolder}/facebook-dark.svg`,
+        linkedin: `${iconsFolder}/linkedin-dark.svg`,
+        instagram: `${iconsFolder}/instagram-dark.svg`,
+        facebook: `${iconsFolder}/facebook-dark.svg`,
     },
 };
