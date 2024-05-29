@@ -1,12 +1,16 @@
 @import "normalize.css";
 @import "App.module.css";
 
+html {
+  background: var(--background-main);
+}
+
 html[theme="dark"] {
-  background: var(--darkest-gray);
+  --background-main: var(--darkest-gray);
 }
 
 html[theme="light"] {
-  background: var(--white);
+  --background-main: var(--white);
 }
 
 a {
