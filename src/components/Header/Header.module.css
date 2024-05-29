@@ -84,12 +84,6 @@
     align-items: center;
   }
 
-  .pageTabs {
-    display: flex;
-    margin-right: 115px;
-    gap: 50px;
-  }
-
   .rightIcons {
     margin-right: 52px;
     gap: 10px;
@@ -121,5 +115,14 @@
 
   .menuDuoIcon {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .pageTabs {
+    display: flex;
+    margin-right: 115px;
+    gap: 50px;
   }
 }

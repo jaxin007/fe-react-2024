@@ -37,7 +37,7 @@
   --text-color-placeholder: var(--gray-2);
   --icon-color: var(--main-red);
   --icon-text-color: var(--darkest-gray);
-  --item-border-color: var(--gray);
+  --item-border-color: var(--gray-3);
   --button-background-main: var(--gray);
   --button-background-secondary: var(--darkest-gray);
   --button-border-secondary: var(--gray-2);
