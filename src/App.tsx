@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
 import { Footer } from '@/components/Footer/Footer.component.tsx';
@@ -25,8 +26,6 @@ function App() {
     useEffect(() => {
         const theme = getCurrentTheme();
 
-        // Initial theme change for body
-        document.body.className = theme;
         setCurrentTheme(theme);
     }, []);
 
@@ -38,9 +37,6 @@ function App() {
         if (theme === currentTheme) {
             return;
         }
-
-        // Dynamic theme change for body
-        document.body.className = theme;
 
         localStorage.setItem('theme', theme);
         setCurrentTheme(theme);
@@ -54,20 +50,23 @@ function App() {
 
     return (
         <>
-            <div className={`${currentTheme === 'dark' ? styles.dark : styles.light}`}>
-                <Header
-                    activePage={activePage}
-                    handleActivePage={handleActivePage}
-                    totalProductsInCart={totalProductsInCart}
-                    theme={currentTheme}
-                    setTheme={handleTheme}
-                />
-                <div>
-                    {activePage === 'products' && <SearchBar theme={currentTheme} />}
-                    {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
-                    <Footer />
+            <HelmetProvider>
+                <Helmet htmlAttributes={{ theme: currentTheme }}></Helmet>
+                <div className={`${currentTheme === 'dark' ? styles.dark : styles.light}`}>
+                    <Header
+                        activePage={activePage}
+                        handleActivePage={handleActivePage}
+                        totalProductsInCart={totalProductsInCart}
+                        theme={currentTheme}
+                        setTheme={handleTheme}
+                    />
+                    <div>
+                        {activePage === 'products' && <SearchBar theme={currentTheme} />}
+                        {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
+                        <Footer />
+                    </div>
                 </div>
-            </div>
+            </HelmetProvider>
         </>
     );
 }
