@@ -1,0 +1,49 @@
+.searchProductsWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin-left: 75px;
+}
+
+.searchInput {
+  border-radius: 20px;
+  width: 330px;
+  background: var(--background-main);
+  color: var(--text-color);
+  border: 1px solid var(--button-border-third);
+  text-indent: 20px;
+  font-weight: 100;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 60px;
+  background: none;
+}
+
+.searchBarRight {
+  display: flex;
+  align-items: center;
+}
+
+.categoryButton {
+  background-color: var(--background-main);
+  color: var(--button-text-secondary);
+  border-radius: 50px;
+  border: 1px solid var(--button-border-third);
+}
+
+.categoryButtonActive {
+  color: var(--text-color-header);
+  border-radius: 50px;
+  background-color: var(--main-red);
+}
+
+@media screen and (min-width: 720px) {
+
+  .searchInput {
+    width: 275px;
+  }
+}
