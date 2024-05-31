@@ -1,19 +1,21 @@
-const imagesFolder = './images';
+import facebook from '../assets/icons/facebook-dark.svg';
+import instagram from '../assets/icons/instagram-dark.svg';
+import linkedin from '../assets/icons/linkedin-dark.svg';
+import maCrownIcon from '../assets/icons/ma-crown.svg';
+import menuDuoIcon from '../assets/icons/menu-duo.svg';
+import searchIcon from '../assets/icons/search-icon.svg';
+import signInIcon from '../assets/icons/sign-in.svg';
+import meImage from '../assets/images/me.jpg';
 
 export const images = {
-    meImage: `${imagesFolder}/me.jpg`,
-    maCrownIcon: `${imagesFolder}/ma-crown.svg`,
-    viteIcon: `${imagesFolder}/vite.svg`,
-    cartIcon: `${imagesFolder}/cart.svg`,
-    menuDuoIcon: `${imagesFolder}/menu-duo.svg`,
-    signInIcon: `${imagesFolder}/sign-in.svg`,
-    signUpIcon: `${imagesFolder}/sign-up.svg`,
-    whiteThemeIcon: `${imagesFolder}/white-theme.svg`,
-    darkThemeIcon: `${imagesFolder}/dark-theme.svg`,
-    verticalDivider: `${imagesFolder}/vertical-divider.svg`,
+    meImage,
+    maCrownIcon,
+    menuDuoIcon,
+    signInIcon,
+    searchIcon,
     social: {
-        linkedin: `${imagesFolder}/linkedin-dark.svg`,
-        instagram: `${imagesFolder}/instagram-dark.svg`,
-        facebook: `${imagesFolder}/facebook-dark.svg`,
+        linkedin,
+        instagram,
+        facebook,
     },
 };

@@ -1,6 +1,6 @@
 export const links = {
-    facebook: 'https://www.facebook.com/cherkasy.masters',
-    linkedin: 'https://www.linkedin.com/company/master-of-code',
-    instagram: 'https://www.instagram.com/masters_academy__',
+    facebook: 'https://www.facebook.com/jaxin007',
+    linkedin: 'https://www.linkedin.com/in/dmytro-bilozor-3b54bb1ab',
+    instagram: 'https://www.instagram.com/jaxin0007',
     google: 'https://www.google.com',
 };

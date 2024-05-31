@@ -1,5 +1,5 @@
 .cardWrapper {
-  border: 1px solid #333;
+  border: 1px solid var(--item-border-color);
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,7 @@
   padding: 20px 40px;
   width: 275px;
   height: 400px;
+  color: var(--text-color);
 }
 
 .cardImage {

@@ -2,15 +2,6 @@
   background: none;
   display: flex;
   width: 50px;
-  justify-content: center;
-}
-
-.cartButton:hover {
-  border-color: transparent;
-}
-
-.cartButton:focus {
-  outline: transparent;
 }
 
 .counter {
@@ -19,8 +10,8 @@
   justify-content: center;
   min-width: 17px;
   height: 17px;
-  color: var(--white-color);
-  background: var(--hover-red);
+  background: var(--icon-color);
+  color: var(--icon-text-color);
   position: relative;
   z-index: 999;
   top: -5px;
