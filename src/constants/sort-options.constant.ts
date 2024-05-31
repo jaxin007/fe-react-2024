@@ -1,1 +1,1 @@
-export const sortOptions = ['Price (Low-High)', 'Newest', 'Oldest'] as const;
+export const sortOptions = ['Price (High-Low)', 'Price (Low-High)', 'Newest', 'Oldest'] as const;
