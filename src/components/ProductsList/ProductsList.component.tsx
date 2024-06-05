@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { ProductCard } from '@/components/ProductCard/ProductCard.component.tsx';
-import { products } from '@/constants/products.constant.ts';
 import type { Product } from '@/models/product.model.ts';
 import type { Cart } from '@/types/cart.type.ts';
 import type { Themes } from '@/types/themes.type.ts';
@@ -11,9 +10,10 @@ import styles from './ProductsList.module.css';
 interface ProductProps {
     updateTotalCart: () => void;
     theme: Themes;
+    products: Product[];
 }
 
-export const ProductList: React.FC<ProductProps> = ({ updateTotalCart, theme }) => {
+export const ProductList: React.FC<ProductProps> = ({ updateTotalCart, theme, products }) => {
     const initialProductIds = localStorage.getItem('cart') || '{}';
     const [productsCart, setProductsCart] = useState<Cart>(initialProductIds ? JSON.parse(initialProductIds) : {});
 

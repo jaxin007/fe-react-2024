@@ -9,18 +9,15 @@ import styles from './ProductsDropdownFilter.module.css';
 
 interface ProductsDropdownFilterProps {
     theme: Themes;
+    sortOption: string;
+    handleSortOption: (option: string) => void;
 }
 
-export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme }) => {
-    const [sortOption, setSortOption] = useState<string>(sortOptions[0]);
+export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme, handleSortOption, sortOption }) => {
     const [isSortOptionsOpen, setIsSortOptionsOpen] = useState<boolean>(false);
 
     const handleSortOptionsOpen = (option: boolean) => {
         setIsSortOptionsOpen(option);
-    };
-
-    const handleSort = (option: string) => {
-        setSortOption(option);
     };
 
     return (
@@ -38,7 +35,7 @@ export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme 
                                 className={sortOption === option ? styles.dropdownOptionActive : styles.dropdownOption}
                                 key={option}
                                 onClick={() => {
-                                    handleSort(option);
+                                    handleSortOption(option);
                                 }}
                             >
                                 {option}

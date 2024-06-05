@@ -9,17 +9,21 @@ import styles from './SearchBar.module.css';
 
 interface SearchBarProps {
     theme: Themes;
+    handleCategoryFilter: (category: string) => void;
+    selectedCategories: Set<string>;
+    sortOption: string;
+    handleSortOption: (option: string) => void;
 }
 
-const SearchBar: FC<SearchBarProps> = ({ theme }) => (
+const SearchBar: FC<SearchBarProps> = ({ theme, handleCategoryFilter, selectedCategories, handleSortOption, sortOption }) => (
     <div className={styles.searchBar}>
         <div className={styles.searchBarWrapper}>
             <SearchProductsForm />
 
             <div className={styles.searchBarRight}>
-                <ProductsCategories />
+                <ProductsCategories selectedCategories={selectedCategories} handleCategoryFilter={handleCategoryFilter} />
 
-                <ProductsDropdownFilter theme={theme} />
+                <ProductsDropdownFilter theme={theme} handleSortOption={handleSortOption} sortOption={sortOption} />
             </div>
         </div>
     </div>
