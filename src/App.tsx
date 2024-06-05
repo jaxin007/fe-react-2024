@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
 import { Footer } from '@/components/Footer/Footer.component.tsx';
 import { Header } from '@/components/Header/Header.component.tsx';
+import { Pagination } from '@/components/Pagination/Pagination.component.tsx';
 import { ProductList } from '@/components/ProductsList/ProductsList.component.tsx';
 import SearchBar from '@/components/SearchBar/SearchBar.component.tsx';
 import { products } from '@/constants/products.constant.ts';
@@ -127,7 +128,10 @@ function App() {
                     {activePage === 'about' ? (
                         <AboutMe />
                     ) : (
-                        <ProductList products={productsList} updateTotalCart={updateTotalCart} theme={currentTheme} />
+                        <>
+                            <ProductList products={productsList} updateTotalCart={updateTotalCart} theme={currentTheme} />
+                            <Pagination theme={currentTheme} totalItems={productsList.length} />
+                        </>
                     )}
                     <Footer />
                 </div>
