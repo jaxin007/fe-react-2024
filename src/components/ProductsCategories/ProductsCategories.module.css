@@ -29,6 +29,14 @@
 
   .categoriesFilter {
     display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .categoriesFilter {
+    display: flex;
     align-items: center;
     gap: 20px;
     margin-right: 60px;

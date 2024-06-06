@@ -29,6 +29,7 @@
   color: var(--white);
   font-weight: 700;
   border: none;
+  cursor: default;
 }
 
 .paginationButtonInactive {

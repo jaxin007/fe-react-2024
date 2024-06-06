@@ -3,7 +3,6 @@
   align-items: center;
   color: var(--text-color-header);
   gap: 10px;
-  width: 330px;
   position: relative;
 }
 

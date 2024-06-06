@@ -29,6 +29,7 @@ html[theme="dark"] {
   --button-text-secondary: var(--white);
   --button-background-third: var(--gray);
   --button-border-third: var(--gray-2);
+  --main-line: var(--dark-hover);
 }
 
 html[theme="light"] {
@@ -47,4 +48,5 @@ html[theme="light"] {
   --button-text-secondary: var(--gray-2);
   --button-background-third: var(--white);
   --button-border-third: var(--gray-4);
+  --main-line: var(--gray-3);
 }

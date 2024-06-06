@@ -1,5 +1,4 @@
 import type { FC, JSX } from 'react';
-import { useState } from 'react';
 
 import { ArrowLeft } from '@/assets/icons/ArrowLeft.tsx';
 import { ArrowRight } from '@/assets/icons/ArrowRight.tsx';
@@ -10,27 +9,18 @@ import styles from './Pagination.module.css';
 
 interface PaginationProps {
     totalItems: number;
-    // TODO: Implement the following props from the parent component
-    // currentPage: number;
-    // onPageChange: (page: number) => void;
+    currentPage: number;
+    handlePageChange: (page: number) => void;
     theme: Themes;
+    totalPages: number;
 }
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const Pagination: FC<PaginationProps> = ({ totalItems, theme }) => {
-    const [currentPage, setCurrentPage] = useState<number>(1);
-
-    const itemsPerPage = 3;
-    const totalPages = Math.ceil(totalItems / itemsPerPage) || 1;
-
+export const Pagination: FC<PaginationProps> = ({ totalItems, theme, currentPage, handlePageChange, totalPages }) => {
     const firstPage = 1;
 
     const isOnFirstPage = currentPage === firstPage;
     const isOnLastPage = currentPage === totalPages;
-
-    const handlePageChange = (page: number) => {
-        setCurrentPage(page);
-    };
 
     const goToNextPage = () => {
         if (!isOnLastPage) {
@@ -49,12 +39,18 @@ export const Pagination: FC<PaginationProps> = ({ totalItems, theme }) => {
     // Generate the pagination buttons
     for (let index = 0; index < totalPages; index++) {
         const page = index + 1;
+        const nextPage = currentPage + 1;
+        const previousPage = currentPage - 1;
 
         // Generate the pagination button
-        const pageButton = <PaginationButton buttonPage={page} currentPage={currentPage} handlePageChange={handlePageChange} />;
+        const pageButton = <PaginationButton buttonPage={page} currentPage={currentPage} handlePageChange={handlePageChange} key={page} />;
         // Generate the previous and next buttons
-        const pageButtonPrevious = <PaginationButton buttonPage={page - 1} currentPage={currentPage} handlePageChange={handlePageChange} />;
-        const pageButtonNext = <PaginationButton buttonPage={page + 1} currentPage={currentPage} handlePageChange={handlePageChange} />;
+        const pageButtonPrevious = (
+            <PaginationButton buttonPage={page - 1} currentPage={currentPage} handlePageChange={handlePageChange} key={previousPage} />
+        );
+        const pageButtonNext = (
+            <PaginationButton buttonPage={page + 1} currentPage={currentPage} handlePageChange={handlePageChange} key={nextPage} />
+        );
 
         // Generate the three dots
         const threeDots = <div className={styles.paginationDots}>...</div>;
