@@ -37,6 +37,7 @@ export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme,
                                 key={option}
                                 onClick={() => {
                                     handleSortOption(option);
+                                    setIsSortOptionsOpen(false);
                                 }}
                             >
                                 {option}
