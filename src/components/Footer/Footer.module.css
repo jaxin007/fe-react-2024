@@ -14,6 +14,7 @@
   margin-top: 30px;
   margin-bottom: 80px;
   width: 85%;
+  max-width: var(--max-mobile-width);
 }
 
 .iconsBlock {
@@ -40,6 +41,7 @@
 
   .footerInfo {
     margin-top: 55px;
+    max-width: var(--max-desktop-width);
   }
 
   .line {

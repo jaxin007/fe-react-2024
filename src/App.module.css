@@ -10,7 +10,9 @@
   --gray-3: #CCC;
   --gray-4: #E1E1E1;
   --white-hover: #F1F1F1;
-  --dark-hover: #656565
+  --dark-hover: #656565;
+  --max-desktop-width: 1300px;
+  --max-mobile-width: 400px;
 }
 
 html[theme="dark"] {
