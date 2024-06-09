@@ -1,0 +1,56 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+  gap: 5px;
+}
+
+.paginationButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--button-hover-main);
+  color: var(--button-text-secondary);
+  font-size: 14px;
+}
+
+.paginationButton:hover {
+  background: var(--button-hover-main);
+  transition: .3s;
+}
+
+.paginationButtonActive {
+  composes: paginationButton;
+  background: var(--main-red);
+  color: var(--white);
+  font-weight: 700;
+  border: none;
+  cursor: default;
+}
+
+.paginationButtonInactive {
+  composes: paginationButton;
+  cursor: default;
+}
+
+.paginationButtonInactive:hover {
+  background: none;
+}
+
+.paginationButtonActive:hover {
+  background: var(--main-red);
+}
+
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  width: 32px;
+  height: 32px;
+  cursor: default;
+}

@@ -3,4 +3,5 @@ export const links = {
     linkedin: 'https://www.linkedin.com/in/dmytro-bilozor-3b54bb1ab',
     instagram: 'https://www.instagram.com/jaxin0007',
     google: 'https://www.google.com',
+    home: '/#',
 };

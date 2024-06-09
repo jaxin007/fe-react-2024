@@ -22,10 +22,10 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ totalProductsInCart, handleActivePage, activePage, theme, setTheme }) => (
-    <div>
+    <div className={styles.headerWrapper}>
         <div className={styles.header}>
             <div className={styles.leftIcons}>
-                <IconWithRedirect icon={images.maCrownIcon} url={links.google} alt={'masters academy icon'}></IconWithRedirect>
+                <IconWithRedirect icon={images.maCrownIcon} url={links.home} alt={'masters academy icon'}></IconWithRedirect>
                 <div className={styles.themes}>
                     <button className={styles.moonIcon} onClick={() => setTheme('dark')}>
                         <Moon theme={theme} />

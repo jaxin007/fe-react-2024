@@ -9,7 +9,10 @@
   --gray-2: #585858;
   --gray-3: #CCC;
   --gray-4: #E1E1E1;
-  --grey-hover: #F1F1F1;
+  --white-hover: #F1F1F1;
+  --dark-hover: #656565;
+  --max-desktop-width: 1300px;
+  --max-mobile-width: 400px;
 }
 
 html[theme="dark"] {
@@ -22,11 +25,13 @@ html[theme="dark"] {
   --icon-text-color: var(--white);
   --item-border-color: var(--gray);
   --button-background-main: var(--gray);
+  --button-hover-main: var(--dark-hover);
   --button-background-secondary: var(--main-red);
   --button-border-secondary: var(--main-red);
   --button-text-secondary: var(--white);
   --button-background-third: var(--gray);
   --button-border-third: var(--gray-2);
+  --main-line: var(--dark-hover);
 }
 
 html[theme="light"] {
@@ -39,9 +44,11 @@ html[theme="light"] {
   --icon-text-color: var(--darkest-gray);
   --item-border-color: var(--gray-3);
   --button-background-main: var(--gray);
+  --button-hover-main: var(--white-hover);
   --button-background-secondary: var(--darkest-gray);
   --button-border-secondary: var(--gray-2);
   --button-text-secondary: var(--gray-2);
   --button-background-third: var(--white);
   --button-border-third: var(--gray-4);
+  --main-line: var(--gray-3);
 }

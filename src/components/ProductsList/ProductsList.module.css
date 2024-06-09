@@ -4,18 +4,29 @@
   height: 100%;
   overflow-y: auto;
   background: var(--background-main);
+  display: flex;
+  justify-content: center;
 }
 
 .grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: var(--max-mobile-width);
+  align-items: center;
+  justify-content: center;
   gap: 30px;
-  grid-template-columns: repeat(1, minmax(275px, 1fr));
-  justify-items: center;
 }
 
 @media screen and (min-width: 720px) {
 
+  .mainGridWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    max-width: var(--max-desktop-width);
+    /*grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));*/
   }
 }

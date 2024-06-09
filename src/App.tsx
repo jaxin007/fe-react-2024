@@ -4,8 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
 import { Footer } from '@/components/Footer/Footer.component.tsx';
 import { Header } from '@/components/Header/Header.component.tsx';
-import { ProductList } from '@/components/ProductsList/ProductsList.component.tsx';
-import SearchBar from '@/components/SearchBar/SearchBar.component.tsx';
+import { ProductWrapper } from '@/components/ProductWrapper/ProductWrapper.component.tsx';
 import { getCurrentTheme } from '@/helpers/get-current-theme.ts';
 import { getProductsCartAmount } from '@/helpers/get-products-cart-amount.ts';
 import type { Pages } from '@/types/pages.type.ts';
@@ -15,6 +14,12 @@ function App() {
     const [activePage, setActivePage] = useState<Pages>('about');
     const [totalProductsInCart, setTotalProductsInCart] = useState(0);
     const [currentTheme, setCurrentTheme] = useState<Themes>('dark');
+
+    const updateTotalCart = () => {
+        const totalProducts = getProductsCartAmount();
+
+        setTotalProductsInCart(totalProducts);
+    };
 
     useEffect(() => {
         const productsCartAmount = getProductsCartAmount();
@@ -40,12 +45,6 @@ function App() {
         setCurrentTheme(theme);
     };
 
-    const updateTotalCart = () => {
-        const totalProducts = getProductsCartAmount();
-
-        setTotalProductsInCart(totalProducts);
-    };
-
     return (
         <>
             <HelmetProvider>
@@ -57,11 +56,9 @@ function App() {
                     theme={currentTheme}
                     setTheme={handleTheme}
                 />
-                <div>
-                    {activePage === 'products' && <SearchBar theme={currentTheme} />}
-                    {activePage === 'about' ? <AboutMe /> : <ProductList updateTotalCart={updateTotalCart} theme={currentTheme} />}
-                    <Footer />
-                </div>
+                {activePage === 'about' && <AboutMe />}
+                {activePage === 'products' && <ProductWrapper theme={currentTheme} updateTotalCart={updateTotalCart} />}
+                <Footer />
             </HelmetProvider>
         </>
     );

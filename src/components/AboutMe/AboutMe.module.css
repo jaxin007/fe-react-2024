@@ -38,7 +38,7 @@
 
   .aboutMeInfo {
     flex-direction: row-reverse;
-    max-width: 1175px;
+    max-width: var(--max-desktop-width);
     gap: 100px;
     margin: 60px;
   }

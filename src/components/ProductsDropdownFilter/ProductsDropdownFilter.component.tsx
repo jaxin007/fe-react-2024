@@ -3,24 +3,22 @@ import { useState } from 'react';
 
 import { ArrowDown } from '@/assets/icons/ArrowDown.tsx';
 import { sortOptions } from '@/constants/sort-options.constant.ts';
+import type { SortOptions } from '@/types/sort-options.type.ts';
 import type { Themes } from '@/types/themes.type.ts';
 
 import styles from './ProductsDropdownFilter.module.css';
 
 interface ProductsDropdownFilterProps {
     theme: Themes;
+    sortOption: string;
+    handleSortOption: (option: SortOptions) => void;
 }
 
-export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme }) => {
-    const [sortOption, setSortOption] = useState<string>(sortOptions[0]);
+export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme, handleSortOption, sortOption }) => {
     const [isSortOptionsOpen, setIsSortOptionsOpen] = useState<boolean>(false);
 
     const handleSortOptionsOpen = (option: boolean) => {
         setIsSortOptionsOpen(option);
-    };
-
-    const handleSort = (option: string) => {
-        setSortOption(option);
     };
 
     return (
@@ -38,7 +36,8 @@ export const ProductsDropdownFilter: FC<ProductsDropdownFilterProps> = ({ theme 
                                 className={sortOption === option ? styles.dropdownOptionActive : styles.dropdownOption}
                                 key={option}
                                 onClick={() => {
-                                    handleSort(option);
+                                    handleSortOption(option);
+                                    setIsSortOptionsOpen(false);
                                 }}
                             >
                                 {option}

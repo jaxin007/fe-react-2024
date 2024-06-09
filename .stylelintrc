@@ -43,7 +43,6 @@
 
     "unit-case": "lower",
 
-    "value-keyword-case": "lower",
     "value-no-vendor-prefix": true,
 
     "max-empty-lines": 2,
@@ -102,7 +101,12 @@
     "block-opening-brace-newline-after": "always-multi-line",
     "block-opening-brace-space-before": "always",
     "block-opening-brace-space-after": "always-single-line",
-    "property-no-unknown": true
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["composes"]
+      }
+    ]
   },
   "ignoreFiles": [
     "./homeworks/**/dist/**/*",
