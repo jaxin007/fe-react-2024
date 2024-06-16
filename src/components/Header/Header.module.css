@@ -53,6 +53,8 @@
 .activeButton {
   background: none;
   font-weight: 700 !important;
+  display: flex;
+  align-items: center;
 }
 
 .inactiveButton {
@@ -133,6 +135,6 @@
   .pageTabs {
     display: flex;
     margin-right: 115px;
-    gap: 50px;
+    gap: 100px;
   }
 }
