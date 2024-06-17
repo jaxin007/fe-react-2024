@@ -7,7 +7,7 @@ import { LayoutComponent } from '@/components/Layout/Layout.component.tsx';
 import { ProductWrapper } from '@/components/ProductWrapper/ProductWrapper.component.tsx';
 import { getCurrentTheme } from '@/helpers/get-current-theme.ts';
 import { getProductsCartAmount } from '@/helpers/get-products-cart-amount.ts';
-import { NotFoundPage } from '@/pages/NotFound.page.tsx';
+import { NotFoundPage } from '@/pages/NotFound/NotFound.page.tsx';
 import type { Themes } from '@/types/themes.type.ts';
 
 function App() {
