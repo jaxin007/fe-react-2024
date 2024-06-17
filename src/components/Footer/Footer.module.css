@@ -1,7 +1,7 @@
 .footerBlock {
   display: flex;
   justify-content: center;
-  margin-top: -20px;
+  margin-bottom: 20px;
   background: var(--background-main);
   color: var(--text-color);
 }

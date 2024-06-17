@@ -52,7 +52,7 @@
 
 .activeButton {
   background: none;
-  font-weight: 700 !important;
+  font-weight: 700;
   display: flex;
   align-items: center;
 }
