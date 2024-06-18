@@ -1,16 +1,21 @@
 import type { FC } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import styles from './IconWithRedirect.module.css';
 
 interface IconWithRedirectProps {
     icon: string;
     url: string;
-    className?: string;
     alt?: string;
+    className?: string;
 }
 
-const IconWithRedirect: FC<IconWithRedirectProps> = ({ className = 'a', icon, url, alt = 'icon' }) => (
-    <a className={className} href={url}>
-        <img src={icon} alt={alt} />
-    </a>
+const IconWithRedirect: FC<IconWithRedirectProps> = ({ icon, url, alt = 'icon', className }) => (
+    <>
+        <NavLink to={url}>
+            <img className={className || styles.redirectImage} src={icon} alt={alt} />
+        </NavLink>
+    </>
 );
 
 export default IconWithRedirect;

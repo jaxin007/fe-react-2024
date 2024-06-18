@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Route, Routes } from 'react-router-dom';
 
 import { AboutMe } from '@/components/AboutMe/AboutMe.component.tsx';
-import { Footer } from '@/components/Footer/Footer.component.tsx';
-import { Header } from '@/components/Header/Header.component.tsx';
+import { LayoutComponent } from '@/components/Layout/Layout.component.tsx';
 import { ProductWrapper } from '@/components/ProductWrapper/ProductWrapper.component.tsx';
 import { getCurrentTheme } from '@/helpers/get-current-theme.ts';
 import { getProductsCartAmount } from '@/helpers/get-products-cart-amount.ts';
-import type { Pages } from '@/types/pages.type.ts';
+import { NotFoundPage } from '@/pages/NotFound/NotFound.page.tsx';
 import type { Themes } from '@/types/themes.type.ts';
 
 function App() {
-    const [activePage, setActivePage] = useState<Pages>('about');
     const [totalProductsInCart, setTotalProductsInCart] = useState(0);
     const [currentTheme, setCurrentTheme] = useState<Themes>('dark');
 
@@ -32,10 +31,6 @@ function App() {
         setCurrentTheme(theme);
     }, []);
 
-    const handleActivePage = (page: Pages) => {
-        setActivePage(page);
-    };
-
     const handleTheme = (theme: Themes) => {
         if (theme === currentTheme) {
             return;
@@ -49,16 +44,16 @@ function App() {
         <>
             <HelmetProvider>
                 <Helmet htmlAttributes={{ theme: currentTheme }}></Helmet>
-                <Header
-                    activePage={activePage}
-                    handleActivePage={handleActivePage}
-                    totalProductsInCart={totalProductsInCart}
-                    theme={currentTheme}
-                    setTheme={handleTheme}
-                />
-                {activePage === 'about' && <AboutMe />}
-                {activePage === 'products' && <ProductWrapper theme={currentTheme} updateTotalCart={updateTotalCart} />}
-                <Footer />
+                <Routes>
+                    <Route
+                        path={'/'}
+                        element={<LayoutComponent totalProductsInCart={totalProductsInCart} theme={currentTheme} setTheme={handleTheme} />}
+                    >
+                        <Route index element={<AboutMe />} />
+                        <Route path={'/products'} element={<ProductWrapper theme={currentTheme} updateTotalCart={updateTotalCart} />} />
+                        <Route path={'*'} element={<NotFoundPage />} />
+                    </Route>
+                </Routes>
             </HelmetProvider>
         </>
     );

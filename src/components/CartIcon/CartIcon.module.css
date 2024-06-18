@@ -1,7 +1,9 @@
 .cartButton {
   background: none;
   display: flex;
+  justify-content: center;
   width: 50px;
+  position: relative;
 }
 
 .counter {
@@ -12,10 +14,16 @@
   height: 17px;
   background: var(--icon-color);
   color: var(--icon-text-color);
-  position: relative;
+  position: absolute;
   z-index: 999;
-  top: -5px;
-  right: 11px;
+  top: 3px;
+  right: 6px;
   border-radius: 50px;
   user-select: none;
+}
+
+.cartIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

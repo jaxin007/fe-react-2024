@@ -1,0 +1,33 @@
+.notFoundWrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.notFoundContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.numbers {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.notFoundText {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.backHomeButton {
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-red);
+  border-radius: 40px;
+  color: var(--text-color);
+}
